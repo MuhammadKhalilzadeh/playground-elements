@@ -84,7 +84,7 @@
       ]
     },
     "build:styles-module": {
-      "command": "FORCE_COLOR=1 rollup -c rollup.config.styles.js",
+      "command": "cross-env FORCE_COLOR=1 rollup -c rollup.config.styles.js",
       "files": [
         "playground-styles.css",
         "rollup.config.styles.js"
@@ -105,7 +105,7 @@
       ]
     },
     "build:typescript-module": {
-      "command": "FORCE_COLOR=1 rollup -c rollup.config.typescript.js",
+      "command": "cross-env FORCE_COLOR=1 rollup -c rollup.config.typescript.js",
       "files": [
         "rollup.config.typescript.js"
       ],
@@ -114,7 +114,7 @@
       ]
     },
     "build:service-worker": {
-      "command": "FORCE_COLOR=1 rollup -c rollup.config.service-worker.js",
+      "command": "cross-env FORCE_COLOR=1 rollup -c rollup.config.service-worker.js",
       "dependencies": [
         "build:ts"
       ],
@@ -128,7 +128,7 @@
       ]
     },
     "build:web-worker": {
-      "command": "FORCE_COLOR=1 rollup -c rollup.config.web-worker.js",
+      "command": "cross-env FORCE_COLOR=1 rollup -c rollup.config.web-worker.js",
       "dependencies": [
         "build:ts",
         "build:typescript-module"
@@ -142,7 +142,7 @@
       ]
     },
     "build:codemirror": {
-      "command": "FORCE_COLOR=1 rollup -c rollup.config.codemirror.js",
+      "command": "cross-env FORCE_COLOR=1 rollup -c rollup.config.codemirror.js",
       "files": [
         "rollup.config.codemirror.js",
         "rollup.config.common.js",
@@ -153,7 +153,7 @@
       ]
     },
     "build:configurator": {
-      "command": "FORCE_COLOR=1 rollup -c rollup.config.configurator.js",
+      "command": "cross-env FORCE_COLOR=1 rollup -c rollup.config.configurator.js",
       "dependencies": [
         "build:ts",
         "build:service-worker",
@@ -283,6 +283,7 @@
     "clean-css": "^5.1.2",
     "codemirror": "^5.65.9",
     "codemirror-grammar-mode": "^0.1.10",
+    "cross-env": "^7.0.3",
     "es-module-lexer": "^1.1.0",
     "eslint": "^8.51.0",
     "eslint-plugin-import": "^2.28.1",
@@ -308,6 +309,7 @@
     "comlink": "^4.4.1",
     "fuse.js": "^7.0.0",
     "lit": "^2.0.0 || ^3.0.0",
+    "playground-elements": "^0.19.1",
     "tslib": "^2.6.3",
     "vscode-languageserver-protocol": "^3.17.2"
   }
